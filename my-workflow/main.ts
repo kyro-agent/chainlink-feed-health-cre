@@ -98,17 +98,17 @@ function onCronTrigger(runtime: Runtime<Config>, _payload: CronPayload) {
     blockNumber: LAST_FINALIZED_BLOCK_NUMBER,
   });
 
-  const [description] = decodeFunctionResult({
+  const description = decodeFunctionResult({
     abi: AGGREGATOR_V3_ABI.description,
     functionName: "description",
     data: bytesToHex(descPromise.result().data),
-  }) as [string];
+  }) as string;
 
-  const [decimals] = decodeFunctionResult({
+  const decimals = decodeFunctionResult({
     abi: AGGREGATOR_V3_ABI.decimals,
     functionName: "decimals",
     data: bytesToHex(decimalsPromise.result().data),
-  }) as [number];
+  }) as number;
 
   const [roundId, answer, , updatedAt] = decodeFunctionResult({
     abi: AGGREGATOR_V3_ABI.latestRoundData,
