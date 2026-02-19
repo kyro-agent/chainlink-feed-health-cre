@@ -1,0 +1,8 @@
+# CRE Workflow Settings
+staging-settings:
+  user-workflow:
+    workflow-name: "feed-health-monitor"
+  workflow-artifacts:
+    workflow-path: "./main.ts"
+    config-path: "./config.staging.json"
+    secrets-path: "../secrets.yaml"

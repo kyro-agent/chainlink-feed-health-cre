@@ -1,0 +1,8 @@
+{
+  "schedule": "0 */10 * * * *",
+  "feedAddress": "0x71041dddad3595F9CEd3DcCFBe3D1F4b0a16Bb70",
+  "feedName": "ETH/USD",
+  "stalenessThresholdMinutes": 10,
+  "chainSelectorName": "ethereum-mainnet-base-1",
+  "isTestnet": false
+}
